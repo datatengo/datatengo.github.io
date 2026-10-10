@@ -1,0 +1,227 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>DataTengo Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single left-aligned column, asymmetric hero with a record-merge "specimen" beside the headline */
+:root {
+  --bg: #F3F5F6;
+  --surface: #FFFFFF;
+  --ink: #12232E;
+  --muted: #5A6B75;
+  --line: #D5DDE1;
+  --accent: #0F6E6A;
+  --mark: #C98A1B;
+  --mark-soft: #F6E9CF;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E171D; --surface: #15222A; --ink: #E4ECEF; --muted: #93A5AE;
+    --line: #26363F; --accent: #4FC1B9; --mark: #E2A93F; --mark-soft: #3A2E17;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E171D; --surface: #15222A; --ink: #E4ECEF; --muted: #93A5AE;
+  --line: #26363F; --accent: #4FC1B9; --mark: #E2A93F; --mark-soft: #3A2E17;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 17px; line-height: 1.6;
+  padding-inline: 20px;
+}
+.wrap { max-width: 1040px; margin: 0 auto; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--mark); outline-offset: 3px; }
+
+header.top {
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  padding-block: 24px; border-bottom: 1px solid var(--line);
+}
+.brand { font-family: var(--display); font-weight: 700; font-size: 1.3rem; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
+.brand span { color: var(--accent); }
+nav { display: flex; gap: 22px; flex-wrap: wrap; }
+nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+nav a:hover { color: var(--ink); }
+
+.hero {
+  display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center;
+  padding-block: 72px 64px;
+}
+.hero > * { min-width: 0; }
+.eyebrow { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px; }
+h1 {
+  font-family: var(--display); font-weight: 700; font-size: clamp(2.3rem, 5.4vw, 3.8rem);
+  line-height: 1.05; letter-spacing: -0.025em; margin: 0 0 22px; text-wrap: balance;
+}
+h1 em { font-style: normal; background: linear-gradient(transparent 62%, var(--mark-soft) 62%); }
+.lede { color: var(--muted); font-size: 1.12rem; max-width: 34em; margin: 0 0 28px; }
+.cta { display: inline-block; background: var(--ink); color: var(--bg); padding: 13px 22px; border-radius: 4px; text-decoration: none; font-weight: 500; }
+.cta:hover { background: var(--accent); }
+
+/* record-merge specimen */
+.specimen { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; font-family: var(--mono); font-size: 0.82rem; overflow-x: auto; }
+.specimen .bar { padding: 10px 16px; border-bottom: 1px solid var(--line); color: var(--muted); display: flex; justify-content: space-between; gap: 12px; }
+.specimen table { border-collapse: collapse; width: 100%; min-width: 360px; }
+.specimen th, .specimen td { text-align: left; padding: 8px 16px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.specimen th { color: var(--muted); font-weight: 400; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.specimen td { font-variant-numeric: tabular-nums; }
+.specimen .dup td { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--mark); }
+.specimen .keep td { color: var(--ink); background: var(--mark-soft); }
+.specimen .foot { padding: 10px 16px; color: var(--accent); }
+
+section { padding-block: 64px; border-top: 1px solid var(--line); }
+.sec-head { display: grid; grid-template-columns: 240px 1fr; gap: 40px; }
+.sec-head > * { min-width: 0; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.7rem; letter-spacing: -0.015em; line-height: 1.15; margin: 0; text-wrap: balance; }
+.label { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+
+.services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 40px; }
+.svc h3 { font-family: var(--display); font-weight: 500; font-size: 1.2rem; margin: 0 0 8px; }
+.svc p { margin: 0; color: var(--muted); }
+.svc .tags { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+.svc .tags span { font-family: var(--mono); font-size: 0.72rem; border: 1px solid var(--line); border-radius: 3px; padding: 2px 7px; color: var(--muted); }
+
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 26px; }
+.steps li { display: grid; grid-template-columns: 56px 1fr; gap: 16px; }
+.steps .n { font-family: var(--mono); color: var(--mark); font-size: 0.9rem; padding-top: 3px; }
+.steps strong { display: block; font-weight: 500; }
+.steps p { margin: 2px 0 0; color: var(--muted); max-width: 36em; }
+
+.about p { margin: 0 0 16px; max-width: 38em; }
+
+.contact-box { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 28px; display: grid; gap: 16px; max-width: 560px; }
+.contact-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.contact-row code { font-family: var(--mono); font-size: 1rem; user-select: all; }
+.copy { font: inherit; font-size: 0.85rem; background: transparent; color: var(--accent); border: 1px solid var(--line); border-radius: 4px; padding: 5px 12px; cursor: pointer; }
+.contact-box p { margin: 0; color: var(--muted); }
+
+footer { border-top: 1px solid var(--line); padding-block: 28px 40px; color: var(--muted); font-size: 0.85rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+@media (max-width: 780px) {
+  .hero { grid-template-columns: 1fr; gap: 36px; padding-block: 44px; }
+  .sec-head { grid-template-columns: 1fr; gap: 20px; }
+  .services { grid-template-columns: 1fr; }
+  section { padding-block: 48px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .cta, nav a { transition: background .15s, color .15s; }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top">Data<span>Tengo</span></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="top">
+    <div>
+      <p class="eyebrow">DataTengo Consulting Ltd.</p>
+      <h1>Ellucian expertise for <em>Banner, Degree Works</em> and the move to Workday.</h1>
+      <p class="lede">Consulting for colleges and universities modernizing their student systems. We integrate and modernize Banner, keep Degree Works running smoothly, and convert Banner data to Workday without losing the history your institution depends on.</p>
+      <a class="cta" href="#contact">Start a conversation</a>
+    </div>
+
+    <figure class="specimen" aria-label="Example: Banner fields mapped to Workday Student fields during data conversion">
+      <div class="bar"><span>banner → workday</span><span>mapping</span></div>
+      <table>
+        <thead><tr><th>Banner</th><th>Workday Student</th></tr></thead>
+        <tbody>
+          <tr><td>SPRIDEN_ID</td><td>Student ID</td></tr>
+          <tr><td>SPRIDEN_LAST_NAME</td><td>Legal Name</td></tr>
+          <tr><td>SGBSTDN_MAJR_CODE_1</td><td>Program of Study</td></tr>
+          <tr class="keep"><td>STVTERM 202610</td><td>Academic Period</td></tr>
+        </tbody>
+      </table>
+      <figcaption class="foot">✓ mapped · validated · reconciled</figcaption>
+    </figure>
+  </div>
+
+  <section id="services">
+    <div class="sec-head">
+      <div><p class="label">Services</p><h2>What we do</h2></div>
+      <div class="services">
+        <div class="svc">
+          <h3>Banner integration &amp; modernization</h3>
+          <p>Connect Ellucian Banner to the systems around it and plan the move to Banner SaaS, with integrations that are tested, documented and supportable.</p>
+          <div class="tags"><span>Ellucian Banner</span><span>SaaS</span><span>Integrations</span></div>
+        </div>
+        <div class="svc">
+          <h3>Ellucian Degree Works</h3>
+          <p>Configuration, troubleshooting and routine health checks so students and advisors can trust their degree audits.</p>
+          <div class="tags"><span>Degree audit</span><span>Log review</span></div>
+        </div>
+        <div class="svc">
+          <h3>Banner to Workday data conversion</h3>
+          <p>Field mapping, extraction, cleanup and reconciliation for institutions moving student data from Banner to Workday, including duplicate person records.</p>
+          <div class="tags"><span>Data mapping</span><span>Validation</span><span>Workday Student</span></div>
+        </div>
+        <div class="svc">
+          <h3>Banner support &amp; reporting</h3>
+          <p>Front-line support experience with Banner products and third-party reporting tools, from ticket triage to root-cause analysis and report fixes.</p>
+          <div class="tags"><span>Tier 2/3 support</span><span>Third-party reporting</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="sec-head">
+      <div><p class="label">Approach</p><h2>How an engagement runs</h2></div>
+      <ol class="steps">
+        <li><span class="n">Step 1</span><div><strong>Scope the problem</strong><p>A short call to understand the system, the symptoms and who needs to approve changes.</p></div></li>
+        <li><span class="n">Step 2</span><div><strong>Investigate and report</strong><p>Review data and logs, then deliver clear findings with a proposed fix and its risks.</p></div></li>
+        <li><span class="n">Step 3</span><div><strong>Fix with care</strong><p>Changes are tested, staged and logged. Nothing irreversible happens without your sign-off.</p></div></li>
+        <li><span class="n">Step 4</span><div><strong>Hand over</strong><p>Documentation and a walkthrough so your team can keep things running.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="sec-head">
+      <div><p class="label">About</p><h2>Built on support experience</h2></div>
+      <div class="about">
+        <p>DataTengo Consulting Ltd. was founded by a software support analyst with years of front-line experience supporting Ellucian Banner, Degree Works and third-party reporting for higher-education clients.</p>
+        <p>That background shapes how we work: we read the logs, we check the data, and we explain what we found in plain language to both IT and the registrar's office.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="sec-head">
+      <div><p class="label">Contact</p><h2>Get in touch</h2></div>
+      <div class="contact-box">
+        <p>Tell us about the system and the problem. We usually reply within one business day.</p>
+        <div class="contact-row">
+          <a class="cta" id="mailBtn" href="#contact">Email us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 DataTengo Consulting Ltd.</span>
+    <span>Banner · Degree Works · Workday data conversion</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var u = ['rui', 'wang', 'j'].join('.'), d = ['gmail', 'com'].join('.');
+  document.getElementById('mailBtn').href = 'mailto:' + u + '@' + d + '?subject=' + encodeURIComponent('Inquiry for DataTengo Consulting');
+})();
+</script>
+
+</body></html>
