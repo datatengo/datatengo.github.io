@@ -203,11 +203,10 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 40px; color: var
     <div class="sec-head">
       <div><p class="label">Contact</p><h2>Get in touch</h2></div>
       <div class="contact-box">
-        <div class="contact-row">
-          <code id="email">rui.wang.j@gmail.com</code>
-          <button class="copy" id="copyBtn" type="button">Copy email</button>
-        </div>
         <p>Tell us about the system and the problem. We usually reply within one business day.</p>
+        <div class="contact-row">
+          <a class="cta" id="mailBtn" href="#contact">Email us</a>
+        </div>
       </div>
     </div>
   </section>
@@ -219,12 +218,10 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 40px; color: var
 </div>
 
 <script>
-document.getElementById('copyBtn').addEventListener('click', function () {
-  var btn = this, text = document.getElementById('email').textContent;
-  function done(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy email'; }, 1600); }
-  function fallback(){ var r = document.createRange(); r.selectNodeContents(document.getElementById('email')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Press Ctrl+C'; }
-  try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
-});
+(function () {
+  var u = ['rui', 'wang', 'j'].join('.'), d = ['gmail', 'com'].join('.');
+  document.getElementById('mailBtn').href = 'mailto:' + u + '@' + d + '?subject=' + encodeURIComponent('Inquiry for DataTengo Consulting');
+})();
 </script>
 
 </body></html>
